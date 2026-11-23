@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section id="view-loading"><p>Loading…</p></section>
+    <section id="view-waiting" hidden>
+      <h1>Your quiz starts in</h1>
+      <p id="waiting-clock" style="font-size:2rem"></p>
+    </section>
+    <section id="view-open" hidden>
+      <p>Time left: <strong id="open-clock"></strong></p>
+      <p>(Questions will appear here in the next step.)</p>
+    </section>
+    <section id="view-closed" hidden>
+      <h1>This quiz is closed.</h1>
+    </section>
+    <section id="view-error" hidden>
+      <p id="error-text" role="alert"></p>
+    </section>
+    <button id="logout-btn" type="button">Sign out</button>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

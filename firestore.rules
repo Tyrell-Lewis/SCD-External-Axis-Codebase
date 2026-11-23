@@ -1,9 +1,18 @@
 rules_version = '2';
-
 service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if false;
+  match /databases/{db}/documents {
+
+    match /clockSync/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['t'])
+        && request.resource.data.t == request.time;
+    }
+
+    // A candidate may read only their own candidate doc, wherever it sits in the tree
+    match /{path=**}/scheduled_exam_candidates/{candId} {
+      allow read: if request.auth != null
+        && resource.data.firebase_uid == request.auth.uid;
     }
   }
 }

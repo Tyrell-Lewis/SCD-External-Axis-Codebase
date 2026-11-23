@@ -12,7 +12,7 @@ onAuthStateChanged(auth, (user) => {
     $("signed-in-view").hidden = !user;
     if (user) {
         $("who").textContent = user.email;
-        // Redirect to quiz.html here
+        window.location.href = "quiz.html"; // redirect to assssment page
     }
 });
 
