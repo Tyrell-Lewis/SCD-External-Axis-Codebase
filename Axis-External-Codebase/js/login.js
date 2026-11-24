@@ -12,7 +12,8 @@ onAuthStateChanged(auth, (user) => {
     $("signed-in-view").hidden = !user;
     if (user) {
         $("who").textContent = user.email;
-        window.location.href = "quiz.html"; // redirect to assssment page
+        console.log("went to this redirect")
+        window.location.href = "home.html"; // redirect to assssment page
     }
 });
 

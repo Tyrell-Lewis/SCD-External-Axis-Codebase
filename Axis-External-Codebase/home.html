@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My assessments</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <h1 id="welcome">Welcome back</h1>
+      <button id="logout-btn" type="button">Sign out</button>
+    </header>
+    <p id="status">Loading…</p>
+
+    <h2>Active now <span id="active-count" class="badge" hidden></span></h2>
+    <div id="active-list" class="cards"></div>
+
+    <h2>Upcoming <span id="upcoming-count" class="badge" hidden></span></h2>
+    <div id="upcoming-list" class="cards"></div>
+
+    <h2>Assessment history</h2>
+    <table>
+      <thead><tr><th>Exam name</th><th>Date ended</th></tr></thead>
+      <tbody id="history-body"></tbody>
+    </table>
+    <p id="history-empty" hidden>No past assessments found.</p>
+  </main>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 import { auth, db } from "./firebase.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
 import { collectionGroup, query, where, getDocs }
-  from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+  from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
 import { syncClock, serverNow } from "./clock.js";
 import { logout } from "./auth.js";
 
@@ -74,6 +74,8 @@ onAuthStateChanged(auth, async (user) => {
     runStateMachine(cand);
   } catch (e) {
     console.error(e);
+    console.error("Load failed:", e.stack);
+    console.log("error is here")
     showError("Could not load your quiz. Please refresh, or contact the organiser.");
   }
 });
