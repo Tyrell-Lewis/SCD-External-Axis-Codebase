@@ -1,0 +1,121 @@
+.btn, .btn-flat, .btn-large, .btn-small, .card, .collection {
+    border-radius: 10px;
+}
+
+nav .selected {
+    border-bottom: white;
+    border-bottom-style: inset;
+    animation: tabSelect 0.2s ease-in-out;
+}
+
+
+.brand-logo {
+    margin: 0 1rem !important;
+    text-wrap: nowrap;
+}
+
+#nav-mobile,
+#nav-mobile li {
+    height: 100%;
+}
+
+#user-button > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#user-button > a * {
+    flex: 1;
+}
+
+#profile-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 5px;
+    width: 10%;
+}
+
+#profile-dropdown > .collection {
+    border-radius: 10px;
+    box-shadow: 0 0 12px -4px black;
+}
+
+
+@keyframes tabSelect {
+    from {
+        border-bottom-color: rgba(255, 255, 255, 0);
+    } to {
+        border-bottom-color: rgba(255, 255, 255, 1);
+    }
+}
+
+.main-content {
+    height: 120vh;
+}
+
+.flash-messages {
+    width: 100%;
+    position: absolute;
+    z-index: 1100;
+}
+
+.flash-message {
+    transition-duration: 0.5s;
+    height: 50px;
+    border-radius: 10px;
+    z-index: 1100;
+}
+
+.fit-vertical {
+    display: flex;
+    flex-direction: column;
+    > * {
+        flex: 1;
+    }
+    > .row {
+        width: 100%;
+    }
+}
+
+.height-scroll {
+    overflow-y: auto;
+}
+
+#page-header {
+    flex: 0;
+    margin-left: 0;
+}
+
+/* ══ SIDE NAV ═════════════════════════════════════════ */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav .row {
+    margin: 0;
+}
+
+#slide-out li:first-child {
+    background-color: var(--main-colour);
+}
+
+.user-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background:rgba(255, 0, 0, 0.2);
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errors {
+    color: red;
+    background-color: white;
+    transition: opacity 0.5s;
+}
+

@@ -1,0 +1,3 @@
+.noUi-connect, .noUi-handle, .noUi-vertical .noUi-handle, .noUi-target.noUi-vertical .noUi-tooltip {
+    background-color: var(--main-colour);
+}
